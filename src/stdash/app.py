@@ -3,13 +3,16 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import requests
 import datetime as dt
+import os
 
 st.title('요청자, 처리자 불균형')
 st.subheader('Requests & Predictioner 데이터가 같으면 True')
 
 # 데이터 로드
 def load_data():
-    url = 'http://43.202.66.118:8077/all'
+    DB = os.getenv("DB")
+    DB_PORT = os.getenv("DB_PORT")
+    url = f'http://{DB}:{DB_PORT}/all'
     r = requests.get(url)
     d = r.json()
 
