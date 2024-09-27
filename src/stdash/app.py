@@ -12,10 +12,10 @@ st.subheader('Requests & Predictioner 데이터가 같으면 True')
 def load_data():
     DB = os.getenv("DB")
     DB_PORT = os.getenv("DB_PORT")
-    url = f'http://{DB}:{DB_PORT}/all'
+    url= f'http://{DB}:{DB_PORT}/all'
     #DB = '43.202.66.118'
     #DB_PORT = '8077'
-    url = 'http://43.202.66.118:8077/all'
+    #url = 'http://43.202.66.118:8077/all'
     r = requests.get(url)
     d = r.json()
 
