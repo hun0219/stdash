@@ -1,0 +1,24 @@
+[project]
+name = "stdash"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "hun0219", email = "gsw98000@gmail.com"},
+]
+dependencies = [
+    "streamlit>=1.38.0",
+    "matplotlib>=3.9.2",
+]
+requires-python = "==3.11.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.dev-dependencies]
+test = [
+    "jupyter>=1.1.1",
+    "notebook>=7.2.2",
+]
